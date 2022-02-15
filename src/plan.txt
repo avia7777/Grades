@@ -1,0 +1,35 @@
+Year 2021-2022:
+    Semester A:
+        Course A:
+            Excersice 1:
+            Excersice 2:
+            Excersice 3:
+
+        Course B:
+            Excersice 1:
+            Excersice 2:
+            Excersice 3:
+
+        Course C:
+            Excersice 1:
+            Excersice 2:
+            Excersice 3:
+
+    Semester B:
+        Course A:
+            Excersice 1:
+            Excersice 2:
+            Excersice 3:
+
+        Course B:
+            Excersice 1:
+            Excersice 2:
+            Excersice 3:
+
+MileStones:
+    a. Ui - courses + Excersices - final view
+    b. Web Scrapper - fetch data from moodle - handle differnet courses.
+    c. multiple users
+    d. Build on web server - frontend + backend
+
+

@@ -1,24 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import Line from './Line';
+import react from 'react';
 
 function App() {
+  // let elements = getData();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    react.createElement
+    // <div className="App">
+    //     <Line name='bills' price='155'/>
+    //     <Line name='store' price='270'/>
+    // </div>
   );
 }
 

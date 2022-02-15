@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import react from 'react';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
+  // <div>Shachar</div>,
   document.getElementById('root')
 );
 
