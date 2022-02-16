@@ -9,7 +9,6 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  // <div>Shachar</div>,
   document.getElementById('root')
 );
 

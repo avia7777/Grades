@@ -1,7 +1,7 @@
 function Exercise(props) {
-    console.log(props)
+    // console.log(props)
     return (
-        <div>
+        <div className='Exercise'>
             <span>Exercise {props.index}: </span>
             <span>{props.grade}</span>
         </div>
