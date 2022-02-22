@@ -3,11 +3,31 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import react from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Course from './Components/Course';
+
+const exercises1 = [
+  {index: 1, grade: 92},
+  {index: 2, grade: 100},
+  {index: 3, grade: 76},
+  {index: 4, grade: 85},
+  {index: 5, grade: 95}
+]
+const exercises2 = [
+  {index: 1, grade: 60},
+  {index: 2, grade: 75},
+]
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route path="Algorithms" element={<Course title="Algorithms" exercises={exercises1}/>} />
+        <Route path="Probability" element={<Course title="Probability" exercises={exercises2} />} />
+      </Route>
+    </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

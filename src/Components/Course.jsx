@@ -1,6 +1,11 @@
+import { getExercises } from "../data";
 import Exercise from "./Exercise";
+import { Link } from "react-router-dom";
+
 
 function Course(props) {
+    let exercises = getExercises();
+
     const exerciseElements = props.exercises.map((element, key) => {
         return <Exercise key={key} index={element.index} grade={element.grade}/>
     });

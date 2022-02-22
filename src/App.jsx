@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './App.css';
 import Course from './Components/Course';
+import { Outlet, Link } from "react-router-dom";
 
 function App() {
   const exercises = [
@@ -23,7 +24,19 @@ function App() {
   
   return (
     <div className="App">
-      <Course title="Algo" exercises={exercises}/>
+      <h1>Grades</h1>
+      <Link to="/">Homepage</Link> |{" "}
+      <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem"
+        }}
+      >
+        <Link to="/Algorithms">Algorithms</Link> |{" "}
+        <Link to="/Probability">Probability</Link>
+      </nav>
+      {/* <Course title="Algo" exercises={exercises}/> */}
+      <Outlet />
     </div>
   );
 }
