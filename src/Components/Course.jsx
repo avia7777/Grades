@@ -1,18 +1,18 @@
-import { getExercises } from "../data";
+import { getCourses, getExercises } from "../data";
 import Exercise from "./Exercise";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 
 function Course(props) {
-    let exercises = getExercises();
-
-    const exerciseElements = props.exercises.map((element, key) => {
+    let params = useParams();
+    let courses = getCourses();
+    let curCourse = courses.find( course => course.id === params.courseId)
+    const exerciseElements = curCourse.exercises.map((element, key) => {
         return <Exercise key={key} index={element.index} grade={element.grade}/>
     });
-
     return (
         <div className="Course">
-            <h1>{props.title}</h1>
+            <h1>{curCourse.title}</h1>
             {exerciseElements}
         </div>
     )
