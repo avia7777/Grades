@@ -6,7 +6,8 @@ import { useParams, Link } from "react-router-dom";
 function Course(props) {
     let params = useParams();
     let courses = getCourses();
-    let curCourse = courses.find( course => course.id === params.courseId)
+    let curCourse = courses.find( course => course.id === params.courseId);
+
     const exerciseElements = curCourse.exercises.map((element, key) => {
         return <Exercise key={key} index={element.index} grade={element.grade}/>
     });

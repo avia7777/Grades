@@ -1,21 +1,21 @@
 import { useEffect } from 'react';
 import './App.css';
 import Course from './Components/Course';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Menu from "./Components/Menu"
 
 function App() {
   
-  // let exercises = [];
-  // useEffect( async() => {
-  //   let res = await fetch('./data.json');
-  //   // let resJson = await res.json();
-  //   console.log(res);
-  //   res = await res.json();
-  //   console.log(res);
-  //   exercises = res[0].exercises;
-  // }, [])
-  // console.log(exercises);
+  let exercises = [];
+  useEffect( async() => {
+    let res = await fetch('./data.json');
+    // let resJson = await res.json();
+    console.log(res);
+    res = await res.json();
+    console.log(res);
+    exercises = res[0].exercises;
+  }, [])
+  console.log(exercises);
   
   return (
     <div className="App">
