@@ -5,9 +5,7 @@ import { useParams, Link } from "react-router-dom";
 
 function Course(props) {
     let params = useParams();
-    let courses = getCourses();
-    let curCourse = courses.find( course => course.id === params.courseId);
-
+    let curCourse = props.globalData.find( course => course.id === params.courseId);
     const exerciseElements = curCourse.exercises.map((element, key) => {
         return <Exercise key={key} index={element.index} grade={element.grade}/>
     });
@@ -20,11 +18,3 @@ function Course(props) {
 }
 
 export default Course;
-
-// const arr = [1, 2, 5];
-
-// function myFunc(value, index) {
-//     console.log(`Value at index ${index} is ${value}`);
-// }
-
-// arr.map(myFunc);

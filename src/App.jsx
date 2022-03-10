@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Course from './Components/Course';
 import { Routes, Route } from "react-router-dom";
@@ -6,16 +6,13 @@ import Menu from "./Components/Menu"
 
 function App() {
   
-  let exercises = [];
+  const [exercises, setExercises] = useState([]);
+
   useEffect( async() => {
-    let res = await fetch('./data.json');
-    // let resJson = await res.json();
-    console.log(res);
+    let res = await fetch('http://localhost:3000/data.json');
     res = await res.json();
-    console.log(res);
-    exercises = res[0].exercises;
+    setExercises(res)
   }, [])
-  console.log(exercises);
   
   return (
     <div className="App">
@@ -23,7 +20,7 @@ function App() {
       <div className='container'>
         <Routes>
           <Route path='/' element={<h1>Grades</h1>}></Route>
-          <Route path="courses/:courseId" element={<Course />} />
+          <Route path="courses/:courseId" element={<Course globalData={exercises}/>} />
         </Routes>
       </div>
     </div>
