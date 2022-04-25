@@ -3,7 +3,7 @@ import './App.css';
 import Course from './Components/Course';
 import { Routes, Route } from "react-router-dom";
 import Menu from "./Components/Menu"
-import getCoursesID from './Services/FetchCourses';
+import {getCoursesID, getExercisesByCourse} from './Services/FetchCourses';
 
 
 function App() {
@@ -12,10 +12,11 @@ function App() {
 
   useEffect( async () => {
     let res = await fetch('http://localhost:3000/data.json');
-    getCoursesID('8328558a7c2e32ffa8ab8e3fcc6dc3fa', 783673)
-    res = await res.json()
-    setExercises(res)
-  }, [])
+    getCoursesID('8328558a7c2e32ffa8ab8e3fcc6dc3fa', 783673);
+    getExercisesByCourse('8328558a7c2e32ffa8ab8e3fcc6dc3fa', 783673, 67577);
+    res = await res.json();
+    setExercises(res);
+  }, []);
 
   return (
     <div className="App">
