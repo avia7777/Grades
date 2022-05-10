@@ -1,7 +1,7 @@
 let courses = [
     {
         title: "Algo",
-        id: "67504",
+        id: "6750401",
         exercises: [
             {
                 index: 1,
@@ -27,7 +27,7 @@ let courses = [
     },
     {
         title: "Probability",
-        id: "84030",
+        id: "8043001",
         exercises: [
             {
                 index: 1,
@@ -41,7 +41,7 @@ let courses = [
     },
     {
         title: "OOP",
-        id: "67905",
+        id: "67125",
         exercises: [
             {
                 index: 1,

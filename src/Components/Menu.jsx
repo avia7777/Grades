@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { getCourses } from "../data";
 
-function Menu() {
-    let courses = getCourses();
+function Menu(props) {
+    let { courses } = props;
     return (
         <nav>
           <Link className='menu-link homepage-link' to="/">Homepage</Link>
