@@ -4,6 +4,7 @@ import Course from './Components/Course';
 import { Routes, Route } from "react-router-dom";
 import Menu from "./Components/Menu"
 import {getCourses, getExercisesByCourse} from './Services/FetchCourses';
+import Login from './Components/Login';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
     <div className="App">
       <Menu courses={courses}/>
       <div className='container'>
+        <Login />
         <Routes>
           <Route path='/' element={<h1>Grades</h1>}></Route>
           {/* <Route path="courses/:courseId" element={<Course globalData={exercises}/>} /> */}
