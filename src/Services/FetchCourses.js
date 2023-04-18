@@ -1,4 +1,4 @@
-const MOODLE_URL = "https://moodle2.cs.huji.ac.il/nu21/webservice/rest/server.php?moodlewsrestformat=json"
+const MOODLE_URL = "https://moodle2.cs.huji.ac.il/nu22/webservice/rest/server.php?moodlewsrestformat=json"
 
 export const getCourses = async (userToken, userID) => {
     try {
@@ -7,8 +7,11 @@ export const getCourses = async (userToken, userID) => {
       headers: {"Content-Type": "application/x-www-form-urlencoded"},
       method: "POST"
       });
+      console.log(res);
 
       res = await res.json();
+      console.log(res);
+
       let courses = res.map(course => {
         return {
           title: course.fullname.replace(/\d+(\s+|-)\d?/, ''),

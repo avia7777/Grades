@@ -16,8 +16,8 @@ function Login(props) {
     const handleClick = (event) => {
         // Add validation for username and password
         console.log(`Username is ${username}, password is ${password}`);
-        const token = await getWSToken(username, password);
-        const userid = await getUserID(token, username, password);
+        // const token = await getWSToken(username, password);
+        // const userid = await getUserID(token, username, password);
     }
 
     return (

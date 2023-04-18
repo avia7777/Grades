@@ -13,7 +13,8 @@ function App() {
 
   useEffect( async () => {
     // let res = await fetch('http://localhost:3000/data.json');
-    let courses = await getCourses('8328558a7c2e32ffa8ab8e3fcc6dc3fa', 783673);
+    // let courses = await getCourses('8328558a7c2e32ffa8ab8e3fcc6dc3fa', 783673); // Shachar's token
+    let courses = await getCourses('3413952d2d1b585b7577a45772d94eb3', 772075); // Avia's token
     setCourses(courses);
     // getExercisesByCourse('8328558a7c2e32ffa8ab8e3fcc6dc3fa', 783673, 67577);
     // res = await res.json();
